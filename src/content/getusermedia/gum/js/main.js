@@ -14,7 +14,10 @@ var video = document.querySelector('video');
 // Put variables in global scope to make them available to the browser console.
 var constraints = window.constraints = {
   audio: false,
-  video: true
+  video: {
+    width: {min: 640, ideal: 1280, max: 1920},
+    height: {min: 480, ideal: 720, max: 1080}
+  }
 };
 
 function handleSuccess(stream) {
